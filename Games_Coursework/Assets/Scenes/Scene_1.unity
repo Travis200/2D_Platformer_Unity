@@ -990,7 +990,7 @@ GameObject:
   - component: {fileID: 846953544}
   m_Layer: 0
   m_Name: TileMap Collidables
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9556,7 +9556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805028520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 124.03, y: 19.08, z: 0}
+  m_LocalPosition: {x: 117.13, y: 26.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
