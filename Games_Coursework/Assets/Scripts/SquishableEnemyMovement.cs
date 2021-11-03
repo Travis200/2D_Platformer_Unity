@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SquishableEnemyMovement : MonoBehaviour
 {
+
     public float EnemyMovementSpeed =  4;
     private bool moveRight = false;
 
@@ -11,7 +12,7 @@ public class SquishableEnemyMovement : MonoBehaviour
         {
             moveRight = !moveRight;
             Vector3 enemyScale = transform.localScale;
-            enemyScale.x = -1;
+            enemyScale.x *= -1;
             transform.localScale = enemyScale;
         }
     }

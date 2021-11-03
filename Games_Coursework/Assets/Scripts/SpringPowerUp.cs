@@ -28,9 +28,7 @@ public class SpringPowerUp : MonoBehaviour
             float orignalDoubleJump = character2DController.DoubleJumpForce;
             character2DController.SingleJumpForce = SpringJumpPower;
             character2DController.DoubleJumpForce = 0;
-            Debug.Log("Start of wait");
             yield return new WaitForSeconds(SpringJumpDuration);
-            Debug.Log("End of wait");
             character2DController.SingleJumpForce = orignalSingleJump;
             character2DController.DoubleJumpForce = orignalDoubleJump;
             gameObject.GetComponent<Renderer>().enabled = true; ;

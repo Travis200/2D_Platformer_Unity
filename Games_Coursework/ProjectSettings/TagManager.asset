@@ -9,6 +9,10 @@ TagManager:
   - Enemy
   - Wall
   - DeathZone
+  - HitArea
+  - EnemyCollisionDetect
+  - StompCollider
+  - PlayerDamageCollider
   layers:
   - Default
   - TransparentFX

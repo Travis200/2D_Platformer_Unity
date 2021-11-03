@@ -22,9 +22,7 @@ public class ShrinkingPowerup : MonoBehaviour
             Character2DController character2DController = collision.GetComponent<Character2DController>();
             Vector3 OriginalPlayerScale = character2DController.TransformPlayer.localScale;
             character2DController.TransformPlayer.localScale = OriginalPlayerScale * ScaleMultiplier;
-            Debug.Log("Start of wait");
             yield return new WaitForSeconds(ShrinkDuration);
-            Debug.Log("End of wait");
             character2DController.TransformPlayer.localScale = OriginalPlayerScale;
             gameObject.GetComponent<Renderer>().enabled = true; ;
             PowerupActive = false;
