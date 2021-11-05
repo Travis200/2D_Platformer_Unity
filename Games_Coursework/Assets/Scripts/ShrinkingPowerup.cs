@@ -20,11 +20,15 @@ public class ShrinkingPowerup : MonoBehaviour
             PowerupActive = true;
             gameObject.GetComponent<Renderer>().enabled = false;
             Character2DController character2DController = collision.GetComponent<Character2DController>();
-            Vector3 OriginalPlayerScale = character2DController.TransformPlayer.localScale;
-            character2DController.TransformPlayer.localScale = OriginalPlayerScale * ScaleMultiplier;
+            Vector3 playerScale = character2DController.TransformPlayer.localScale;
+            playerScale *= ScaleMultiplier;
+            character2DController.TransformPlayer.localScale = playerScale;
+            Debug.Log("Shrinking PU scale 1" + character2DController.TransformPlayer.localScale);
             yield return new WaitForSeconds(ShrinkDuration);
-            character2DController.TransformPlayer.localScale = OriginalPlayerScale;
-            gameObject.GetComponent<Renderer>().enabled = true; ;
+            playerScale = character2DController.TransformPlayer.localScale;
+            playerScale /= ScaleMultiplier;
+            character2DController.TransformPlayer.localScale = playerScale;
+            gameObject.GetComponent<Renderer>().enabled = true;
             PowerupActive = false;
         }
     }

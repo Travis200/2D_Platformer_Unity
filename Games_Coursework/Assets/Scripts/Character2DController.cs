@@ -5,7 +5,7 @@ public class Character2DController : MonoBehaviour
     [SerializeField] private LayerMask groundPlatformLayerMask;
     public float MovementSpeed;
     public Rigidbody2D rb;
-    public float SingleJumpForce = 3.5f;
+    public float SingleJumpForce = 4f;
     public float DoubleJumpForce = 5f;
     public BoxCollider2D bc;
     private int JumpCount = 0;

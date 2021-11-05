@@ -195,7 +195,7 @@ MonoBehaviour:
     m_Bits: 512
   MovementSpeed: 3.5
   rb: {fileID: 2370039312123843947}
-  SingleJumpForce: 3.5
+  SingleJumpForce: 4
   DoubleJumpForce: 5
   bc: {fileID: 2370039312123843944}
   TransformPlayer: {fileID: 2370039312123843946}

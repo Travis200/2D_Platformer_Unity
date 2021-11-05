@@ -8,7 +8,7 @@ public class SquishableEnemyMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if ((collision.gameObject.CompareTag("Wall")) || collision.gameObject.CompareTag("Enemy"))
         {
             moveRight = !moveRight;
             Vector3 enemyScale = transform.localScale;
