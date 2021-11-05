@@ -16,7 +16,7 @@ public class EnemyDeath : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("StompCollider"))
         {
             Destroy(transform.parent.gameObject);
         }
