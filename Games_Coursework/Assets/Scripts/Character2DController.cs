@@ -41,7 +41,7 @@ public class Character2DController : MonoBehaviour
 
     private bool TouchingGround()
     {   
-        RaycastHit2D raycastHit2D = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0f, Vector2.down, 0.1f, groundPlatformLayerMask);
+        RaycastHit2D raycastHit2D = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0f, rb.gravityScale>0 ? Vector2.down : Vector2.up, 0.1f, groundPlatformLayerMask);
         return raycastHit2D.collider != null;
     }
 }
