@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyDeath : MonoBehaviour
 
 {
-    Rigidbody2D rb;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

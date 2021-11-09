@@ -24,8 +24,13 @@ public class AntiGravityPowerUp : MonoBehaviour
             InvertGravityAndRotation(character2DController);
             Debug.Log("Anti-Gravity PU scale 1" + character2DController.TransformPlayer.localScale);
             yield return new WaitForSeconds(AntiGravityDuration);
-            InvertGravityAndRotation(character2DController);
-            Debug.Log("Anti-Gravity PU scale 1" + character2DController.TransformPlayer.localScale);
+            Debug.Log("Anti-gravity powerup expired");
+            if (character2DController != null)
+            {
+                InvertGravityAndRotation(character2DController);
+                Debug.Log("Anti-Gravity PU scale 1" + character2DController.TransformPlayer.localScale);
+            }
+            
             gameObject.GetComponent<Renderer>().enabled = true;
             PowerupActive = false;
         }

@@ -25,9 +25,13 @@ public class ShrinkingPowerup : MonoBehaviour
             character2DController.TransformPlayer.localScale = playerScale;
             Debug.Log("Shrinking PU scale 1" + character2DController.TransformPlayer.localScale);
             yield return new WaitForSeconds(ShrinkDuration);
-            playerScale = character2DController.TransformPlayer.localScale;
-            playerScale /= ScaleMultiplier;
-            character2DController.TransformPlayer.localScale = playerScale;
+            Debug.Log("shrink powerup expired");
+            if (character2DController != null)
+            {
+                playerScale = character2DController.TransformPlayer.localScale;
+                playerScale /= ScaleMultiplier;
+                character2DController.TransformPlayer.localScale = playerScale;
+            }
             gameObject.GetComponent<Renderer>().enabled = true;
             PowerupActive = false;
         }
