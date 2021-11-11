@@ -47,17 +47,13 @@ public class Character2DController : MonoBehaviour
             animator.SetBool("IsMoving", false);
         }
 
-        if (TouchingGround())
-        {
-            animator.SetBool("IsJumping", false);
-        }
-
         transform.position += new Vector3(HorizontalMovement, 0f, 0f) * Time.deltaTime * MovementSpeed;
         if (Input.GetButtonDown("Jump"))
         {
             if (TouchingGround()) {
                 rb.AddForce(Vector2.up * SingleJumpForce, ForceMode2D.Impulse);
                 JumpCount = 1;
+                animator.SetBool("IsJumping", true);
             }
             else if(JumpCount < 2)
             {
@@ -66,7 +62,14 @@ public class Character2DController : MonoBehaviour
                 JumpCount += 1;
             }
         }
+
+        if (TouchingGround())
+        {
+            animator.SetBool("IsJumping", false);
+        }
+
     }
+
 
     private bool TouchingGround()
     {   

@@ -13,6 +13,8 @@ TagManager:
   - EnemyCollisionDetect
   - StompCollider
   - PlayerDamageCollider
+  - FinishFlag
+  - Coin
   layers:
   - Default
   - TransparentFX

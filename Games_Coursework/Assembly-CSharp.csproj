@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\SquishableEnemyMovement.cs" />
     <Compile Include="Assets\Simple 2D Platformer BE2\ReadMe\Scripts\ReadmeBE2.cs" />
+    <Compile Include="Assets\Scripts\CoinCollected.cs" />
     <Compile Include="Assets\Low_Swordman\Demo\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Character2DController.cs" />
     <Compile Include="Assets\Scripts\SpringPowerUp.cs" />
@@ -68,9 +69,13 @@
     <Compile Include="Assets\Low_Swordman\Demo\Scripts\Swordman.cs" />
     <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\PlayerDeath.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\LevelComplete.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript1.cs" />
     <Compile Include="Assets\Scripts\EnemyDeath.cs" />
     <Compile Include="Assets\Low_Swordman\Demo\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Low_Swordman\Demo\Scripts\Demo_GM.cs" />
+    <Compile Include="Assets\Scripts\CoinAndXPCollector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
