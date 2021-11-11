@@ -7,7 +7,8 @@ public class SpringPowerUp : MonoBehaviour
 {
 
     public float SpringJumpDuration = 20f;
-    public float SpringJumpPower = 10f;
+    public float SpringSingleJumpPower = 6f;
+    public float SpringDoubleJumpPower = 6f;
     private bool PowerupActive = false;
 
 
@@ -26,8 +27,8 @@ public class SpringPowerUp : MonoBehaviour
             Character2DController character2DController = collision.GetComponent<Character2DController>();
             float orignalSingleJump = character2DController.SingleJumpForce;
             float orignalDoubleJump = character2DController.DoubleJumpForce;
-            character2DController.SingleJumpForce = SpringJumpPower;
-            character2DController.DoubleJumpForce = 0;
+            character2DController.SingleJumpForce = SpringSingleJumpPower;
+            character2DController.DoubleJumpForce = SpringDoubleJumpPower;
             yield return new WaitForSeconds(SpringJumpDuration);
             Debug.Log("Spring Jump Powerup Expired");
             if (character2DController != null)

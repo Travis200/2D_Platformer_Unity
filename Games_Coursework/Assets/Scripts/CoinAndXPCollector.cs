@@ -27,14 +27,20 @@ public class CoinAndXPCollector : MonoBehaviour
                 // Resets the xpMultiplier to 1 if coin is not collected within 10 seconds of the last one (breaks positive feedback loop)
                 if (Time.time - lastCoinCollected > 10)
                 {
-                    xpMultiplier = 1;
+                    ResetXPMultiplier();
                 }
                 lastCoinCollected = Time.time;
+                Debug.Log("XP Multiplier: " + xpMultiplier.ToString()); ;
                 xpCount += 1 * xpMultiplier;
                 xpMultiplier++;
                 coinCountText.text = "Coins: " + coinCount.ToString();
                 xpText.text = "XP: " + xpCount.ToString();
             }
         }
+    }
+
+    public void ResetXPMultiplier()
+    {
+        xpMultiplier = 1;
     }
 }
