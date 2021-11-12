@@ -9,6 +9,7 @@ public class PlayerDeath : MonoBehaviour
 {
 
     public GameObject respawnPos;
+    private int _deathCount = 0;
 
     /// <summary>
     /// This causes the player to die when they collide with an enemy or fall of the map. XP multiplier is reset and also all player stats
@@ -23,11 +24,17 @@ public class PlayerDeath : MonoBehaviour
         {
             Debug.Log("Enemy or death area hit");
             GameObject player = transform.parent.gameObject;
+            _deathCount++;
             player.GetComponent<CoinAndXPCollector>().ResetXPMultiplier();
             // Removes all powerups.
             player.GetComponent<Character2DController>().ResetPlayerStats();
             gameObject.transform.parent.position = respawnPos.transform.position;
 
         }
+    }
+
+    public int getDeathCount() 
+    {
+        return _deathCount;
     }
 }

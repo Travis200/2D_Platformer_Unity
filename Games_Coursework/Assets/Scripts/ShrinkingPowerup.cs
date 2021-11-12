@@ -38,12 +38,21 @@ public class ShrinkingPowerup : MonoBehaviour
             character2DController.TransformPlayer.localScale = playerScale;
             Debug.Log("Shrinking PU scale 1" + character2DController.TransformPlayer.localScale);
             PowerupText.text = "Powerup: Shrink";
+            PlayerDeath originalPlayerDeath = collision.GetComponentInChildren<PlayerDeath>();
+            int originalDeathCount = originalPlayerDeath.getDeathCount();
             yield return new WaitForSeconds(ShrinkDuration);
+            PlayerDeath newPlayerDeath = collision.GetComponentInChildren<PlayerDeath>();
+            int newDeathCount = originalPlayerDeath.getDeathCount();
             Debug.Log("shrink powerup expired");
-            PowerupText.text = "Powerup: None";
-            playerScale = character2DController.TransformPlayer.localScale;
-            playerScale /= ScaleMultiplier;
-            character2DController.TransformPlayer.localScale = playerScale;
+
+            if (originalDeathCount == newDeathCount)
+            {
+                PowerupText.text = "Powerup: None";
+                playerScale = character2DController.TransformPlayer.localScale;
+                playerScale /= ScaleMultiplier;
+                character2DController.TransformPlayer.localScale = playerScale;
+            }
+
 
             gameObject.GetComponent<Renderer>().enabled = true;
             PowerupActive = false;

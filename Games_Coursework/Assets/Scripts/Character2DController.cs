@@ -113,6 +113,7 @@ public class Character2DController : MonoBehaviour
         DoubleJumpForce = 5f;
         JumpCount = 0;
         TransformPlayer.localScale = new Vector3(6f, 6f, 6f);
+        rb.gravityScale = 1;
         PowerupText.text = "Powerup: none";
     }
 }

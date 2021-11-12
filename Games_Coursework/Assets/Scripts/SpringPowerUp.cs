@@ -39,11 +39,19 @@ public class SpringPowerUp : MonoBehaviour
             character2DController.SingleJumpForce = SpringSingleJumpPower;
             character2DController.DoubleJumpForce = SpringDoubleJumpPower;
             PowerupText.text = "Powerup: Springjump";
+            PlayerDeath originalPlayerDeath = collision.GetComponentInChildren<PlayerDeath>();
+            int originalDeathCount = originalPlayerDeath.getDeathCount();
             yield return new WaitForSeconds(SpringJumpDuration);
+            PlayerDeath newPlayerDeath = collision.GetComponentInChildren<PlayerDeath>();
+            int newDeathCount = originalPlayerDeath.getDeathCount();
             Debug.Log("Spring Jump Powerup Expired");
-            PowerupText.text = "Powerup: None";
-            character2DController.SingleJumpForce = orignalSingleJump;
-            character2DController.DoubleJumpForce = orignalDoubleJump;
+            if (originalDeathCount == newDeathCount)
+            {
+                PowerupText.text = "Powerup: None";
+                character2DController.SingleJumpForce = orignalSingleJump;
+                character2DController.DoubleJumpForce = orignalDoubleJump;
+            }
+            
             gameObject.GetComponent<Renderer>().enabled = true; ;
             PowerupActive = false;
         }

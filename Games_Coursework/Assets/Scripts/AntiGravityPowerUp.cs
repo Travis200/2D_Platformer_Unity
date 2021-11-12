@@ -36,10 +36,17 @@ public class AntiGravityPowerUp : MonoBehaviour
             InvertGravityAndRotation(character2DController);
             Debug.Log("Anti-Gravity PU scale 1" + character2DController.TransformPlayer.localScale);
             PowerupText.text = "Powerup: Anti-gravity";
+            PlayerDeath originalPlayerDeath = collision.GetComponentInChildren<PlayerDeath>();
+            int originalDeathCount = originalPlayerDeath.getDeathCount();
             yield return new WaitForSeconds(AntiGravityDuration);
+            PlayerDeath newPlayerDeath = collision.GetComponentInChildren<PlayerDeath>();
+            int newDeathCount = originalPlayerDeath.getDeathCount();
             Debug.Log("Anti-gravity powerup expired");
-            PowerupText.text = "Powerup: None";
-            InvertGravityAndRotation(character2DController);
+            if (originalDeathCount == newDeathCount)
+            {
+                PowerupText.text = "Powerup: None";
+                InvertGravityAndRotation(character2DController);
+            }
             Debug.Log("Anti-Gravity PU scale 1" + character2DController.TransformPlayer.localScale);
             
             gameObject.GetComponent<Renderer>().enabled = true;
