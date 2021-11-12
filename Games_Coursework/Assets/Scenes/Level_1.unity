@@ -513,7 +513,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95542958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 101.31, y: 15.14, z: 0}
+  m_LocalPosition: {x: 101.31, y: 15.14, z: 1}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -971,7 +971,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618603671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 182.8, y: 15.3, z: 0}
+  m_LocalPosition: {x: 182.8, y: 15.3, z: 1}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1054,7 +1054,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645405640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 15.3, z: 0}
+  m_LocalPosition: {x: 20, y: 15.3, z: 1}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7322,7 +7322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909100071}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 264.5, y: 15.3, z: 0}
+  m_LocalPosition: {x: 264.5, y: 15.3, z: 1}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15033,6 +15033,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3774742341777159653, guid: 0ac4534dff0244c4fb4d828f37cdf1ad,
+        type: 3}
+      propertyPath: PowerupText
+      value: 
+      objectReference: {fileID: 1003104090}
     - target: {fileID: 3774742341777159656, guid: 0ac4534dff0244c4fb4d828f37cdf1ad,
         type: 3}
       propertyPath: m_Name
@@ -15120,12 +15125,12 @@ PrefabInstance:
     - target: {fileID: 4676628472700777563, guid: 991619b9d0cf50b40a7b0d6041516a44,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.9
+      value: 118.3
       objectReference: {fileID: 0}
     - target: {fileID: 4676628472700777563, guid: 991619b9d0cf50b40a7b0d6041516a44,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: 33.7
       objectReference: {fileID: 0}
     - target: {fileID: 4676628472700777563, guid: 991619b9d0cf50b40a7b0d6041516a44,
         type: 3}
@@ -15324,6 +15329,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5095448799092480411, guid: c433299ada7e46e4d9eedbe34e6f4f4d,
+        type: 3}
+      propertyPath: PowerupText
+      value: 
+      objectReference: {fileID: 1003104090}
     - target: {fileID: 5095448799092480411, guid: c433299ada7e46e4d9eedbe34e6f4f4d,
         type: 3}
       propertyPath: ShrinkDuration

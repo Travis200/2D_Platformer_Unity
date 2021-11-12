@@ -34,11 +34,9 @@ public class SpringPowerUp : MonoBehaviour
             yield return new WaitForSeconds(SpringJumpDuration);
             Debug.Log("Spring Jump Powerup Expired");
             PowerupText.text = "Powerup: None";
-            if (character2DController != null)
-            {
-                character2DController.SingleJumpForce = orignalSingleJump;
-                character2DController.DoubleJumpForce = orignalDoubleJump;
-            }
+            character2DController.SingleJumpForce = orignalSingleJump;
+            character2DController.DoubleJumpForce = orignalDoubleJump;
+            
             gameObject.GetComponent<Renderer>().enabled = true; ;
             PowerupActive = false;
         }

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class AntiGravityPowerUp : MonoBehaviour
 {
+    public TextMeshProUGUI PowerupText;
     public float AntiGravityDuration = 20f;
     private bool PowerupActive = false;
 
@@ -23,13 +25,12 @@ public class AntiGravityPowerUp : MonoBehaviour
             Character2DController character2DController = collision.GetComponent<Character2DController>();
             InvertGravityAndRotation(character2DController);
             Debug.Log("Anti-Gravity PU scale 1" + character2DController.TransformPlayer.localScale);
+            PowerupText.text = "Powerup: Anti-gravity";
             yield return new WaitForSeconds(AntiGravityDuration);
             Debug.Log("Anti-gravity powerup expired");
-            if (character2DController != null)
-            {
-                InvertGravityAndRotation(character2DController);
-                Debug.Log("Anti-Gravity PU scale 1" + character2DController.TransformPlayer.localScale);
-            }
+            PowerupText.text = "Powerup: None";
+            InvertGravityAndRotation(character2DController);
+            Debug.Log("Anti-Gravity PU scale 1" + character2DController.TransformPlayer.localScale);
             
             gameObject.GetComponent<Renderer>().enabled = true;
             PowerupActive = false;
