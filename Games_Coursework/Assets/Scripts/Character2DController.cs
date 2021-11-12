@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controls the players movement from moving left and right to jumping (and also the animations, that accompany this). I have made it
@@ -22,6 +23,13 @@ public class Character2DController : MonoBehaviour
 
     private void Update()
     {
+        // Returns to level select if the player presses escape.
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Level_Select");
+        }
+
+
         // Get the player sideways movement (by default this is controlled using A and D, or the left and right arrow key). 
         var HorizontalMovement = Input.GetAxis("Horizontal");
         // Player is moving to the left.
