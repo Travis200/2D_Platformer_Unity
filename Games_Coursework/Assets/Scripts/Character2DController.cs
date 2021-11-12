@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class Character2DController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Character2DController : MonoBehaviour
     private int JumpCount = 0;
     public Transform TransformPlayer;
     public Animator animator;
+    public TextMeshProUGUI PowerupText;
 
 
     // Start is called before the first frame update
@@ -75,5 +77,15 @@ public class Character2DController : MonoBehaviour
     {   
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0f, rb.gravityScale>0 ? Vector2.down : Vector2.up, 0.1f, groundPlatformLayerMask);
         return raycastHit2D.collider != null;
+    }
+
+    public void ResetPlayerStats()
+    {
+        MovementSpeed = 3.5f;
+        SingleJumpForce = 4f;
+        DoubleJumpForce = 5f;
+        JumpCount = 0;
+        TransformPlayer.localScale = new Vector3(6f, 6f, 6f);
+        PowerupText.text = "Powerup: none";
     }
 }

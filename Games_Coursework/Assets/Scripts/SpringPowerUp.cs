@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SpringPowerUp : MonoBehaviour
 
 {
-
+    public TextMeshProUGUI PowerupText;
     public float SpringJumpDuration = 20f;
     public float SpringSingleJumpPower = 6f;
     public float SpringDoubleJumpPower = 6f;
@@ -29,8 +30,10 @@ public class SpringPowerUp : MonoBehaviour
             float orignalDoubleJump = character2DController.DoubleJumpForce;
             character2DController.SingleJumpForce = SpringSingleJumpPower;
             character2DController.DoubleJumpForce = SpringDoubleJumpPower;
+            PowerupText.text = "Powerup: Springjump";
             yield return new WaitForSeconds(SpringJumpDuration);
             Debug.Log("Spring Jump Powerup Expired");
+            PowerupText.text = "Powerup: None";
             if (character2DController != null)
             {
                 character2DController.SingleJumpForce = orignalSingleJump;
@@ -40,4 +43,5 @@ public class SpringPowerUp : MonoBehaviour
             PowerupActive = false;
         }
     }
+
 }

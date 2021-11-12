@@ -26,8 +26,10 @@ public class PlayerDeath : MonoBehaviour
             GameObject player = transform.parent.gameObject;
             //player.ResetXPMultiplier();
             player.GetComponent<CoinAndXPCollector>().ResetXPMultiplier();
+            player.GetComponent<Character2DController>().ResetPlayerStats();
             /*            CoinAndXPCollector coinAndXPCollector = player<CoinAndXPCollector>(); */
             gameObject.transform.parent.position = respawnPos.transform.position;
+
         }
     }
 }
