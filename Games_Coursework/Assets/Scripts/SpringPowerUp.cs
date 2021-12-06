@@ -33,6 +33,10 @@ public class SpringPowerUp : MonoBehaviour
         IEnumerator AcquirePowerUp(Collider2D player) {
             PowerupActive = true;
             gameObject.GetComponent<Renderer>().enabled = false;
+
+            FindObjectOfType<AudioManager>().Play("powerup");
+
+
             Character2DController character2DController = collision.GetComponent<Character2DController>();
             float orignalSingleJump = character2DController.SingleJumpForce;
             float orignalDoubleJump = character2DController.DoubleJumpForce;

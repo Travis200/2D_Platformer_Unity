@@ -32,6 +32,7 @@ public class ShrinkingPowerup : MonoBehaviour
         {
             PowerupActive = true;
             gameObject.GetComponent<Renderer>().enabled = false;
+            FindObjectOfType<AudioManager>().Play("powerup");
             Character2DController character2DController = collision.GetComponent<Character2DController>();
             Vector3 playerScale = character2DController.TransformPlayer.localScale;
             playerScale *= ScaleMultiplier;

@@ -33,6 +33,10 @@ public class PlayerDeath : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Getter for deathCount
+    /// </summary>
+    /// <returns>_deathCount</returns>
     public int getDeathCount() 
     {
         return _deathCount;

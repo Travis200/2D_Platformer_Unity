@@ -23,6 +23,7 @@ public class EnemyDeath : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("StompCollider"))
         {
+            FindObjectOfType<AudioManager>().Play("bounce");
             Destroy(transform.parent.gameObject);
             Rigidbody2D rb = collision.transform.parent.GetComponent<Rigidbody2D>();
             //Set velocity to zero so force from falling does not negate the bounciness of jumping on top of squishable enemy.

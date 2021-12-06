@@ -71,6 +71,7 @@ public class Character2DController : MonoBehaviour
         {
             // Jump if touching ground
             if (TouchingGround()) {
+                FindObjectOfType<AudioManager>().Play("jump");
                 // Add upwards force specified by the SingleJumpForce variable
                 rb.AddForce(Vector2.up * SingleJumpForce, ForceMode2D.Impulse);
                 JumpCount = 1;
@@ -79,6 +80,7 @@ public class Character2DController : MonoBehaviour
             // Jump if there has been one previous jump since touching the ground. 
             else if(JumpCount < 2)
             {
+                FindObjectOfType<AudioManager>().Play("jump");
                 // Only play jump animation on second jump of double jump.
                 animator.SetBool("IsJumping", true);
                 // Add upwards force specified by the DoubleJumpForce variable

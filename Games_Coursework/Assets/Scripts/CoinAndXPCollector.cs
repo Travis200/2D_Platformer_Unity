@@ -30,6 +30,7 @@ public class CoinAndXPCollector : MonoBehaviour
             CoinCollected coinCollected = collision.GetComponent<CoinCollected>();
             if (!coinCollected.isCollected)
             {
+                FindObjectOfType<AudioManager>().Play("coin_collect");
                 Destroy(collision.gameObject);
                 coinCollected.isCollected = true;
                 coinCount++;

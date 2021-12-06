@@ -31,6 +31,7 @@ public class AntiGravityPowerUp : MonoBehaviour
         {
             Debug.Log("Poweup Acquired!!!!");
             PowerupActive = true;
+            FindObjectOfType<AudioManager>().Play("powerup");
             gameObject.GetComponent<Renderer>().enabled = false;
             Character2DController character2DController = collision.GetComponent<Character2DController>();
             InvertGravityAndRotation(character2DController);
