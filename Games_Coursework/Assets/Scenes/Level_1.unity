@@ -23874,6 +23874,11 @@ PrefabInstance:
       propertyPath: respawnPos
       value: 
       objectReference: {fileID: 1805028520}
+    - target: {fileID: 4676628471062983711, guid: 991619b9d0cf50b40a7b0d6041516a44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4676628471062983712, guid: 991619b9d0cf50b40a7b0d6041516a44,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23899,6 +23904,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4676628472700777560, guid: 991619b9d0cf50b40a7b0d6041516a44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4676628472700777563, guid: 991619b9d0cf50b40a7b0d6041516a44,
         type: 3}
       propertyPath: m_RootOrder
@@ -23907,12 +23917,12 @@ PrefabInstance:
     - target: {fileID: 4676628472700777563, guid: 991619b9d0cf50b40a7b0d6041516a44,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -74
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 4676628472700777563, guid: 991619b9d0cf50b40a7b0d6041516a44,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9
+      value: 12.2
       objectReference: {fileID: 0}
     - target: {fileID: 4676628472700777563, guid: 991619b9d0cf50b40a7b0d6041516a44,
         type: 3}
@@ -23964,6 +23974,11 @@ PrefabInstance:
       propertyPath: PowerupText
       value: 
       objectReference: {fileID: 864742618}
+    - target: {fileID: 4676628472838008684, guid: 991619b9d0cf50b40a7b0d6041516a44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 991619b9d0cf50b40a7b0d6041516a44, type: 3}
 --- !u!1001 &4970854021754347449
