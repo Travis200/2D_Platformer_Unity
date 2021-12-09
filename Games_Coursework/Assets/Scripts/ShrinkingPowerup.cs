@@ -12,6 +12,7 @@ public class ShrinkingPowerup : MonoBehaviour
     public float ShrinkDuration = 20f;
     private bool PowerupActive = false;
     private float ScaleMultiplier = 0.5f;
+    [SerializeField] private GameObject pickupEffect;
 
     /// <summary>
     /// When the player collides with the powerup, this causes the powerup to be acquired which is implemented here (and deactivated).
@@ -31,6 +32,7 @@ public class ShrinkingPowerup : MonoBehaviour
         IEnumerator AcquirePowerUp(Collider2D player)
         {
             PowerupActive = true;
+            Instantiate(pickupEffect, transform.position, transform.rotation);
             gameObject.GetComponent<Renderer>().enabled = false;
             FindObjectOfType<AudioManager>().Play("powerup");
             Character2DController character2DController = collision.GetComponent<Character2DController>();

@@ -13,6 +13,7 @@ public class SpringPowerUp : MonoBehaviour
     public float SpringJumpDuration = 20f;
     public float SpringSingleJumpPower = 6f;
     public float SpringDoubleJumpPower = 6f;
+    [SerializeField] private GameObject pickupEffect;
     private bool PowerupActive = false;
 
     /// <summary>
@@ -32,6 +33,7 @@ public class SpringPowerUp : MonoBehaviour
         // Powerup is applied to the player on a for a set period of time before being removed.
         IEnumerator AcquirePowerUp(Collider2D player) {
             PowerupActive = true;
+            Instantiate(pickupEffect, transform.position, transform.rotation);
             gameObject.GetComponent<Renderer>().enabled = false;
 
             FindObjectOfType<AudioManager>().Play("powerup");

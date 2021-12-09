@@ -33,7 +33,8 @@ public class Character2DController : MonoBehaviour
         // Get the player sideways movement (by default this is controlled using A and D, or the left and right arrow key). 
         var HorizontalMovement = Input.GetAxis("Horizontal");
         // Player is moving to the left.
-        if (HorizontalMovement < 0) {
+        if (HorizontalMovement < 0)
+        {
             // Play the running animation.
             animator.SetBool("IsMoving", true);
             Vector3 playerLocalScale = TransformPlayer.localScale;
@@ -70,7 +71,8 @@ public class Character2DController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             // Jump if touching ground
-            if (TouchingGround()) {
+            if (TouchingGround())
+            {
                 FindObjectOfType<AudioManager>().Play("jump");
                 // Add upwards force specified by the SingleJumpForce variable
                 rb.AddForce(Vector2.up * SingleJumpForce, ForceMode2D.Impulse);
@@ -78,7 +80,7 @@ public class Character2DController : MonoBehaviour
                 animator.SetBool("IsJumping", true);
             }
             // Jump if there has been one previous jump since touching the ground. 
-            else if(JumpCount < 2)
+            else if (JumpCount < 2)
             {
                 FindObjectOfType<AudioManager>().Play("jump");
                 // Only play jump animation on second jump of double jump.
@@ -99,9 +101,9 @@ public class Character2DController : MonoBehaviour
 
 
     private bool TouchingGround()
-    {   
+    {
         // Use raycast to detect if touching the ground. Note raycast direction is depends on if gravity has been inverted. 
-        RaycastHit2D raycastHit2D = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0f, rb.gravityScale>0 ? Vector2.down : Vector2.up, 0.1f, groundPlatformLayerMask);
+        RaycastHit2D raycastHit2D = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0f, rb.gravityScale > 0 ? Vector2.down : Vector2.up, 0.1f, groundPlatformLayerMask);
         return raycastHit2D.collider != null;
     }
 

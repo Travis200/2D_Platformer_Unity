@@ -1,0 +1,143 @@
+[33mcommit 6f9e55b24b159df7310a5f3f44c5e1e12920d034[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Wed Dec 8 21:31:00 2021 +0000
+
+    Implemented basic pathfinding AI that follows the player on flat ground
+
+[33mcommit 7ffe62f8a9aa37be9bd2c95aa785de07b0c034ab[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Mon Dec 6 13:21:08 2021 +0000
+
+    Added audio manager and sound effects to coin collection, powerup colllection and when jumping on top of enemies.
+
+[33mcommit 31e7ba28f16926439f9497604c76e9450d959ba2[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Sat Nov 13 10:36:59 2021 +0000
+
+    Removed level controller as its purpose is redundant
+
+[33mcommit 82a6cdbc0d1af8678f01f80774dda957043f9d80[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Fri Nov 12 22:47:19 2021 +0000
+
+    Fixed bugs with powerups affecting player stats after death. Fixed bug with player death breaking the game due to TMP not being assigned in editor.
+
+[33mcommit d1c70d00c42b4da7ac33df22367d20e9b63aef50[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Fri Nov 12 15:42:23 2021 +0000
+
+    Added finsishing touches for first submission
+
+[33mcommit 75dd669c8ef1b4bd4b80798e30bfaa5cb4754db3[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Fri Nov 12 15:06:18 2021 +0000
+
+    Fixed bug with powerup text and organised hierarchy
+
+[33mcommit 815251aa6008fbf3a766e65c4da8ac82e54f72ec[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Fri Nov 12 13:42:25 2021 +0000
+
+    Added documentation and comments to all scripts
+
+[33mcommit b29a627e1d888e9ad7b6a8848289e145942af50f[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Fri Nov 12 11:17:48 2021 +0000
+
+    Text is now displayed to indicate if a powerup is active and if so which one
+
+[33mcommit ed6a229d892bb853588e265b52db9ae94664903b[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Fri Nov 12 02:07:39 2021 +0000
+
+    Made all player stats reset upon death
+
+[33mcommit 99ddff95dcaedcd191944d98623dded0bafb9ff4[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Thu Nov 11 23:41:05 2021 +0000
+
+    Fixed minor bugs. Added bouncy phyics material. Death now causes player to be transported instead of destroying and recreating prefab. XP multiplier now reset upon death.
+
+[33mcommit 314e2d79c4608641ef9c05dedf625f296bfe0bff[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Thu Nov 11 17:47:52 2021 +0000
+
+    Added stochastic behaviour to squishable enemies (direction, speed etc)
+
+[33mcommit a3d8d96b4ffea2cbc16f4d5fd855ce5f5021188d[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Thu Nov 11 14:28:21 2021 +0000
+
+    Added coin collection and positive feedback xp
+
+[33mcommit 61ece77b0ebcee74a39109307d1cee0a2e6f5ca2[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Tue Nov 9 18:16:00 2021 +0000
+
+    Changed the player sprite to a player and have added animations
+
+[33mcommit 9a4b036757faa3caa0369d16feb4cf79713d5989[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Sat Nov 6 02:23:54 2021 +0000
+
+    Made it so player now bounces off of squishable enemies. Fixed bug with player not being able to double jump more than twice when antigravity power up active
+
+[33mcommit 7d59194115eb5f122acf47150a4020441d1fe341[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Fri Nov 5 19:27:27 2021 +0000
+
+    Added antigravity powerup to game and is now fully functioning
+
+[33mcommit ad991b15c77c6255e8a623caa67de3fb7f3a5637[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Fri Nov 5 02:28:07 2021 +0000
+
+    Added a working level select menu
+
+[33mcommit db2d932d625215489b681421ea7bb4c67f25d133[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Wed Nov 3 17:11:10 2021 +0000
+
+    Squishable enemy now dies when jumped on top of and respawning is working correctly with no known bugs
+
+[33mcommit bb9626230194e617c7da55b0168c297415a0a50d[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Mon Nov 1 18:08:58 2021 +0000
+
+    Background scene added
+
+[33mcommit b5c88968bfe5b1e034ab3352fbe45f536852116c[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Mon Nov 1 17:34:50 2021 +0000
+
+    Add death zone for when player falls off of map
+
+[33mcommit 34ed0f1645eb8695414636a5b3baf8fb3edabc43[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Mon Nov 1 15:16:56 2021 +0000
+
+    Enemy now patrols from wall to wall inside arena and flips and changes travel direction when contact with wall is made
+
+[33mcommit 712435a816a197187092eceddc6d50f6b0652beb[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Sun Oct 31 19:51:06 2021 +0000
+
+    Changed enemy square to a character from the unity store
+
+[33mcommit 02fcae1a13480a30f6370608e8f1526e7e1de651[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Sun Oct 31 19:22:16 2021 +0000
+
+    Fixed bug with camera not working when player respawns and death box now working
+
+[33mcommit 07bac246b39cc59d7f00e41fa8e8022997af89e6[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Sun Oct 31 18:33:41 2021 +0000
+
+    first commit
+
+[33mcommit 8c5453144df3d7672d1b78a58fa3ad8c266042cb[m
+Author: Travis Higgins <75436407+Travis200@users.noreply.github.com>
+Date:   Sun Oct 31 17:43:05 2021 +0000
+
+    Initial commit

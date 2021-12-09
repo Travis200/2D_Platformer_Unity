@@ -11,6 +11,7 @@ public class AntiGravityPowerUp : MonoBehaviour
     public TextMeshProUGUI PowerupText;
     public float AntiGravityDuration = 20f;
     private bool PowerupActive = false;
+    [SerializeField] private GameObject pickupEffect;
 
     /// <summary>
     /// When the player collides with the powerup, this causes the powerup to be acquired which is implemented here (and deactivated).
@@ -31,6 +32,7 @@ public class AntiGravityPowerUp : MonoBehaviour
         {
             Debug.Log("Poweup Acquired!!!!");
             PowerupActive = true;
+            Instantiate(pickupEffect, transform.position, transform.rotation);
             FindObjectOfType<AudioManager>().Play("powerup");
             gameObject.GetComponent<Renderer>().enabled = false;
             Character2DController character2DController = collision.GetComponent<Character2DController>();
