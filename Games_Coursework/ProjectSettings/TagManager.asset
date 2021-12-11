@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - DeathZone
+  - Wall
+  - Ground
+  - EnemyCollisionDetect
+  - StompCollider
+  - FinishFlag
   layers:
   - Default
   - TransparentFX
@@ -17,7 +23,7 @@ TagManager:
   - Lighting
   - Ground
   - Postprocessing
-  - 
+  - Collidables
   - 
   - 
   - 
