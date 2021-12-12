@@ -20,6 +20,7 @@ public class Character2DController : MonoBehaviour
     public BoxCollider2D bc;
     public Animator animator;
     public TextMeshProUGUI PowerupText;
+    [SerializeField] Transform shootingPointTransform;
 
     private void Update()
     {
@@ -38,11 +39,14 @@ public class Character2DController : MonoBehaviour
             // Play the running animation.
             animator.SetBool("IsMoving", true);
             Vector3 playerLocalScale = TransformPlayer.localScale;
+            Vector3 shootingPointLocalScale = shootingPointTransform.localScale;
             // Flip the player to face the left if they were previous facing right.
             if (playerLocalScale.x > 0)
             {
                 playerLocalScale.x *= -1;
                 TransformPlayer.localScale = playerLocalScale;
+                // rotate shooting point so that it is always facing away from the player
+                shootingPointTransform.Rotate(0f, 180f, 0f);
             }
         }
         // Player is moving to the right.
@@ -51,11 +55,14 @@ public class Character2DController : MonoBehaviour
             // Play the running animation.
             animator.SetBool("IsMoving", true);
             Vector3 playerLocalScale = TransformPlayer.localScale;
+            Vector3 shootingPointLocalScale = shootingPointTransform.localScale;
             // Flip the player to face the right if they were previous facing left.
             if (playerLocalScale.x < 0)
             {
                 playerLocalScale.x *= -1;
                 TransformPlayer.localScale = playerLocalScale;
+                // rotate shooting point so that it is always facing away from the player
+                shootingPointTransform.Rotate(0f, 180f, 0f);
             }
         }
         // Player is not moving so play idle animation. 
@@ -119,5 +126,6 @@ public class Character2DController : MonoBehaviour
         TransformPlayer.localScale = new Vector3(6f, 6f, 6f);
         rb.gravityScale = 1;
         PowerupText.text = "Powerup: none";
+        shootingPointTransform.rotation = Quaternion.identity;
     }
 }

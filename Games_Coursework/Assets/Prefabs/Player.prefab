@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &992431179079994095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3142734541074785223}
+  m_Layer: 8
+  m_Name: ShootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3142734541074785223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992431179079994095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08, y: -0.076, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4676628472700777563}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4676628471062983711
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +195,7 @@ GameObject:
   - component: {fileID: 4676628472700777563}
   - component: {fileID: 4676628472700777562}
   - component: {fileID: 4676628472700777561}
+  - component: {fileID: 7925043971703562325}
   - component: {fileID: 4676628472700777566}
   - component: {fileID: 4676628472700777565}
   - component: {fileID: 4676628472700777564}
@@ -189,6 +220,7 @@ Transform:
   - {fileID: 4676628471952514317}
   - {fileID: 4676628471062983712}
   - {fileID: 4676628472838008685}
+  - {fileID: 3142734541074785223}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -263,6 +295,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7925043971703562325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676628472700777560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fb51b5270a3914eba08ea9aa023fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingPoint: {fileID: 3142734541074785223}
+  bullet: {fileID: 97119233358967017, guid: cab556dff28de0044ab2569944f4ea0d, type: 3}
 --- !u!114 &4676628472700777566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +332,7 @@ MonoBehaviour:
   bc: {fileID: 4676628472700777564}
   animator: {fileID: 4676628472700777561}
   PowerupText: {fileID: 0}
+  shootingPointTransform: {fileID: 0}
 --- !u!50 &4676628472700777565
 Rigidbody2D:
   serializedVersion: 4
