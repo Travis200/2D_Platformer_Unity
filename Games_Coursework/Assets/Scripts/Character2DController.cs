@@ -119,6 +119,7 @@ public class Character2DController : MonoBehaviour
     /// </summary>
     public void ResetPlayerStats()
     {
+        gameObject.GetComponent<CoinAndXPCollector>().ResetXPMultiplier();
         MovementSpeed = 3.5f;
         SingleJumpForce = 4f;
         DoubleJumpForce = 5f;
@@ -127,5 +128,6 @@ public class Character2DController : MonoBehaviour
         rb.gravityScale = 1;
         PowerupText.text = "Powerup: none";
         shootingPointTransform.rotation = Quaternion.identity;
+        
     }
 }

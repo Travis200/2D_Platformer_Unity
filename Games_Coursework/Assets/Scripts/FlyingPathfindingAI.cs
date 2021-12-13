@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using System;
 
 /// <summary>
 /// This class is used to for a flying enemy to be able to follow the player with the help of the Pathfinding class
@@ -9,13 +10,15 @@ using Pathfinding;
 public class FlyingPathfindingAI : MonoBehaviour
 {
     // Declare all fields that appear in the inspector
+    [SerializeField] private Transform defaultEnemyPos;
     [SerializeField] private Transform target;
+    [SerializeField] private Transform gridCenter;
     [SerializeField] private Seeker seeker;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform enemyTransform;
     // Declare all variables that appear in the inspector
     public float enemySpeed = 350f;
-    public float nextWaypointDistance =3f;
+    public float nextWaypointDistance = 3f;
     private int currentWaypoint = 0;
 
     private Path path;
@@ -24,7 +27,7 @@ public class FlyingPathfindingAI : MonoBehaviour
     void Start()
     {
 
-        seeker.StartPath(rb.position, target.position, OnPathComplete);
+        seeker.StartPath(rb.position, defaultEnemyPos.position, OnPathComplete);
 
         // Updates the path to follow the player every 0.25 seconds.
         InvokeRepeating("UpdatePath", 0f, 0.25f);
@@ -75,7 +78,7 @@ public class FlyingPathfindingAI : MonoBehaviour
 
     void OnPathComplete(Path p)
     {
-        if(!p.error)
+        if (!p.error)
         {
             path = p;
             currentWaypoint = 0;
@@ -86,7 +89,16 @@ public class FlyingPathfindingAI : MonoBehaviour
     /// </summary>
     private void UpdatePath()
     {
-        seeker.StartPath(rb.position, target.position, OnPathComplete);
+        // Chases the player if they are inside the A* grid
+        if (Math.Abs(target.position.x - gridCenter.position.x) < 17.5)
+        {
+            seeker.StartPath(rb.position, target.position, OnPathComplete);
+        }
+        // Returns to default position
+        else
+        {
+            seeker.StartPath(rb.position, defaultEnemyPos.position, OnPathComplete);
+        }
     }
 
 }

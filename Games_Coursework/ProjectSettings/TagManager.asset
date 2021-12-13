@@ -11,6 +11,8 @@ TagManager:
   - EnemyCollisionDetect
   - StompCollider
   - FinishFlag
+  - Enemy
+  - Platform
   layers:
   - Default
   - TransparentFX
