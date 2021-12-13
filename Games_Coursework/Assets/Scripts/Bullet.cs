@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.name);
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("EnemyCollisionDetect"))
         {
             collision.gameObject.GetComponent<FlyingEnemyDeath>().TakeDamage();
             Destroy(gameObject);

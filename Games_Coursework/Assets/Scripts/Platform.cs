@@ -6,14 +6,13 @@ public class Platform : MonoBehaviour
 {
     [SerializeField] private Transform pos1;
     [SerializeField] private Transform pos2;
-    public Transform startPos;
     private Vector3 nextPos;
     public float speed = 2f;
 
     // Start is called before the first frame update
     void Start()
     {
-        nextPos = startPos.position;
+        nextPos = pos1.position;
     }
 
     // Update is called once per frame

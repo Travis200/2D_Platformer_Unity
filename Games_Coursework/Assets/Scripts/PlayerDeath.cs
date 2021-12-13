@@ -8,7 +8,10 @@ public class PlayerDeath : MonoBehaviour
 
 {
 
-    public GameObject respawnPos;
+    public Transform respawnPoint1;
+    public Transform respawnPoint2;
+    public Transform respawnPoint3;
+    public Transform respawnPoint4;
     private int _deathCount = 0;
 
     /// <summary>
@@ -28,7 +31,24 @@ public class PlayerDeath : MonoBehaviour
             player.GetComponent<CoinAndXPCollector>().ResetXPMultiplier();
             // Removes all powerups.
             player.GetComponent<Character2DController>().ResetPlayerStats();
-            gameObject.transform.parent.position = respawnPos.transform.position;
+/*            gameObject.transform.parent.position = respawnPoint1.position;*/
+
+            if (gameObject.transform.position.x > respawnPoint4.position.x)
+            {
+                gameObject.transform.parent.position = respawnPoint4.position;
+            }
+            else if (gameObject.transform.position.x > respawnPoint3.position.x)
+            {
+                gameObject.transform.parent.position = respawnPoint3.position;
+            }
+            else if (gameObject.transform.position.x > respawnPoint2.position.x)
+            {
+                gameObject.transform.parent.position = respawnPoint2.position;
+            }
+            else
+            {
+                gameObject.transform.parent.position = respawnPoint1.position;
+            }
 
         }
     }

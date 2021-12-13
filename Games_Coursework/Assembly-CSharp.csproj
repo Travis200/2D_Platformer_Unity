@@ -64,6 +64,7 @@
     <Compile Include="Assets\Imported_Unity_Assets\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\Scripts\FlyingPathfindingAI.cs" />
     <Compile Include="Assets\Imported_Unity_Assets\Simple 2D Platformer BE2\ReadMe\Scripts\ReadmeBE2.cs" />
+    <Compile Include="Assets\Scripts\WeaponPowerUpCollect.cs" />
     <Compile Include="Assets\Scripts\CoinCollected.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Imported_Unity_Assets\Low_Swordman\Demo\Scripts\CameraController.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\AntiGravityPowerUp.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
+    <Compile Include="Assets\Scripts\Platform.cs" />
     <Compile Include="Assets\Imported_Unity_Assets\Low_Swordman\Demo\Scripts\GroundSensor.cs" />
     <Compile Include="Assets\Imported_Unity_Assets\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\ShrinkingPowerup.cs" />
@@ -87,7 +89,6 @@
     <Compile Include="Assets\Imported_Unity_Assets\Low_Swordman\Demo\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Imported_Unity_Assets\Low_Swordman\Demo\Scripts\Demo_GM.cs" />
     <Compile Include="Assets\Scripts\CoinAndXPCollector.cs" />
-    <Compile Include="Assets\Scripts\Platform.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imported_Unity_Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -100,7 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e482df16294b76e479d20102c7f46d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPos: {fileID: 0}
+  respawnPoint1: {fileID: 0}
+  respawnPoint2: {fileID: 0}
+  respawnPoint3: {fileID: 0}
+  respawnPoint4: {fileID: 0}
 --- !u!1 &4676628471952514316
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 3142734541074785223}
   bullet: {fileID: 97119233358967017, guid: cab556dff28de0044ab2569944f4ea0d, type: 3}
+  weaponActive: 0
 --- !u!114 &4676628472700777566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,7 +336,7 @@ MonoBehaviour:
   bc: {fileID: 4676628472700777564}
   animator: {fileID: 4676628472700777561}
   PowerupText: {fileID: 0}
-  shootingPointTransform: {fileID: 0}
+  shootingPointTransform: {fileID: 3142734541074785223}
 --- !u!50 &4676628472700777565
 Rigidbody2D:
   serializedVersion: 4

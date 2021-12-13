@@ -48,6 +48,7 @@ public class ShrinkingPowerup : MonoBehaviour
             int newDeathCount = originalPlayerDeath.getDeathCount();
             Debug.Log("shrink powerup expired");
 
+            //  Only reverts the powerup if the player has not dies while it was active (player stats are reset upon death)
             if (originalDeathCount == newDeathCount)
             {
                 PowerupText.text = "Powerup: None";
