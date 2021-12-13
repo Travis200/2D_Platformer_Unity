@@ -32,6 +32,9 @@ public class Platform : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
     }
 
+    /// <summary>
+    /// Draws a Gizmos on of the path that the platform will travel.
+    /// </summary>
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(pos1.position, pos2.position);

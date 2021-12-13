@@ -5,6 +5,7 @@ using System;
 
 /// <summary>
 /// This is my basic pathfinding script where enemies will chase you on a flat platform.
+/// Note: This script is no longer used on any game objects in the game as I have replaced this with the flying pathinding eagle instead.
 /// </summary>
 public class BasicPathFindingAI : MonoBehaviour
 {

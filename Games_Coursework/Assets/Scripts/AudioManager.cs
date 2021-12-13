@@ -8,7 +8,9 @@ using System;
 public class AudioManager : MonoBehaviour
 {
 
-
+    /// <summary>
+    /// This is where the source of the audio file and values such as volume etc are assigned
+    /// </summary>
     [System.Serializable]
     public struct Sound
     {
@@ -30,7 +32,7 @@ public class AudioManager : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
+    // This plays the sound when Play is called on the audio manager with the name of the sound
     void Awake()
     { 
         for (int i = 0; i < sounds.Length; i++)
