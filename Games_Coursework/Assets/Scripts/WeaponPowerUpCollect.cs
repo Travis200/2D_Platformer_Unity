@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class is used to activate the ability to shoot when the pistol is picked up
+/// </summary>
 public class WeaponPowerUpCollect : MonoBehaviour
 {
 
     [SerializeField] private GameObject pickupEffect;
-/*    public Weapon weapon;*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

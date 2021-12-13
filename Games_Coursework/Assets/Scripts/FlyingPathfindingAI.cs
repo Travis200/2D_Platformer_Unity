@@ -5,7 +5,7 @@ using Pathfinding;
 using System;
 
 /// <summary>
-/// This class is used to for a flying enemy to be able to follow the player with the help of the Pathfinding class
+/// This class is used to for a flying enemy to be able to follow the player with the help of the Pathfinding library.
 /// </summary>
 public class FlyingPathfindingAI : MonoBehaviour
 {

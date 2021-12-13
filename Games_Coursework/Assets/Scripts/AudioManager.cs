@@ -2,6 +2,9 @@ using UnityEngine.Audio;
 using UnityEngine;
 using System;
 
+/// <summary>
+/// This class is used to manage audio effects in my game.
+/// </summary>
 public class AudioManager : MonoBehaviour
 {
 

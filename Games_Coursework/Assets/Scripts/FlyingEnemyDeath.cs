@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This class is used to cause the eagles death when it is shot with the specified number of bullets. 
 public class FlyingEnemyDeath : MonoBehaviour
 {
 

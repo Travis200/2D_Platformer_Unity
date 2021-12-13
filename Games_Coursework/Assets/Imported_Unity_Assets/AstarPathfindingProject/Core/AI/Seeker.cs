@@ -1,3 +1,5 @@
+// This script is not my own work and is from the a* pathfinding library (https://arongranberg.com/astar/)
+
 using UnityEngine;
 using System.Collections.Generic;
 #if UNITY_5_5_OR_NEWER

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+/// <summary>
+/// This is my basic pathfinding script where enemies will chase you on a flat platform.
+/// </summary>
 public class BasicPathFindingAI : MonoBehaviour
 {
 

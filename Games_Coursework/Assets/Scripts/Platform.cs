@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class is used to control moving platforms.
+/// </summary>
 public class Platform : MonoBehaviour
 {
     [SerializeField] private Transform pos1;
